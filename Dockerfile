@@ -24,9 +24,9 @@ RUN groupadd hadoop && \
 
 
 
-ADD https://archive.apache.org/dist/hadoop/common/hadoop-${HADOOP_VERSION}.tar.gz /tmp
+ADD https://archive.apache.org/dist/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz /tmp
 
-RUN tar xvfz /tmp/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz --directory=/opt/ && \
+RUN tar xvfz /tmp/hadoop-${HADOOP_VERSION}.tar.gz --directory=/opt/ && \
     ln -s /opt/hadoop-${HADOOP_VERSION} /opt/hadoop && \
     rm -f /tmp/hadoop-${HADOOP_VERSION}.tar.gz
 
